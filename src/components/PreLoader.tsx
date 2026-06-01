@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
@@ -78,7 +78,7 @@ const PreLoader = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (hasRunOnce) return;
 
     // Redirect langsung ke Home jika pertama kali load (saat efek loading berjalan)
