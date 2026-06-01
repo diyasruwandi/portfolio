@@ -40,7 +40,7 @@ export const projectData: Project[] = [
     description:
       "An AI-powered diet recommendation website built using Ollama and the Mistral model to provide interactive meal planning and diet recommendations.",
     image: [diet],
-    link: "https://github.com",
+    link: "https://github.com/diyasruwandi/AI-DIET-DAN-WORKOUT.git",
     tags: ["Python", "Flask", "Ollama", "Mistral"],
   },
 
@@ -60,7 +60,7 @@ export const projectData: Project[] = [
     description:
       "CekKomposisi is a mobile application that implements OCR using PyTesseract to detect text on food packaging and automatically display the scan results. The app also includes daily sugar, salt, and fat intake tracking features with percentage progress charts.",
     image: [cek, cekom2],
-    link: "https://github.com",
+    link: "https://github.com/NanaIkhwan/DailyNutry.git",
     tags: ["Flutter", "Flask", "PyTesseract", "ML"],
     type: "mobile",
   },

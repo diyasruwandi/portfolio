@@ -20,11 +20,7 @@ const Header = () => {
           </div>
           <div className="flex flex-col z-10 font-sans text-xl font-bold lg:text-3xl">
             <TextType
-              text={[
-                "Frontend Developer",
-                "Hi I'm Diyas Ruwandi",
-                "Freelancer",
-              ]}
+              text={["Frontend Developer", "Hi I'm Diyas Ruwandi"]}
               className="text-white"
               typingSpeed={60}
             />

@@ -389,19 +389,20 @@ const PreLoader = () => {
           </div>
         </div>
 
-        <div className="preloader-copy absolute bottom-20 left-1/2 -translate-x-1/2 w-[80%] lg:w-[30%] text-white overflow-hidden">
+        {/* <div className="preloader-copy absolute bottom-20 left-1/2 -translate-x-1/2 w-[80%] lg:w-[30%] text-white overflow-hidden">
           <p className="uppercase text-center text-[0.8rem] font-[400] font-sans">
-            A frontend developer passionate about crafting modern, responsive, and user-friendly web experiences.
+            A frontend developer passionate about crafting modern, responsive,
+            and user-friendly web experiences.
           </p>
-        </div>
+        </div> */}
       </div>
 
       <div className="preloader-header fixed w-full flex justify-center items-center translate-y-[50svh] lg:translate-y-[60svh] origin-top will-change-transform overflow-hidden z-50 pointer-events-none">
         <a
           href="#"
-          className="uppercase text-white text-[12vw] sm:text-[4rem] lg:text-[5rem] font-bold leading-[0.9] block font-sans"
+          className="uppercase text-white text-[8vw] sm:text-[4rem] lg:text-[5rem] font-bold leading-[0.9] block font-sans"
         >
-          diyas.dev
+          creative portfolio
         </a>
       </div>
     </div>
