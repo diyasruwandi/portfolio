@@ -50,7 +50,7 @@ export const projectData: Project[] = [
     description:
       "A modern and responsive personal portfolio website to showcase projects, skills, and contact information professionally.",
     image: [porto],
-    link: "https://github.com",
+    link: "https://www.diyasruwandi.my.id/",
     tags: ["React", "Tailwind", "Typescript", "Vite"],
   },
 
