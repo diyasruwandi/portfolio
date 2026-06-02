@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
 import d1 from "../assets/img/person/d1.jpeg";
@@ -74,9 +74,8 @@ const manualSplitText = (
 const PreLoader = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (sessionStorage.getItem(SESSION_KEY)) return;
-
 
     const ctx = gsap.context(() => {
       try {
