@@ -1,5 +1,4 @@
-import { useLayoutEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import CustomEase from "gsap/CustomEase";
 import d1 from "../assets/img/person/d1.jpeg";
@@ -9,9 +8,7 @@ import d5 from "../assets/img/person/d5.jpg";
 
 gsap.registerPlugin(CustomEase);
 
-// Variabel global dalam cakupan modul. Hanya akan di-reset (kembali false)
-// ketika pengguna menekan tombol Refresh / muat ulang halaman atau menutup web.
-let hasRunOnce = false;
+const SESSION_KEY = "preloader_shown";
 
 // Fungsi manual untuk menggantikan SplitText premium GSAP
 const manualSplitText = (
@@ -76,13 +73,10 @@ const manualSplitText = (
 
 const PreLoader = () => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const navigate = useNavigate();
 
-  useLayoutEffect(() => {
-    if (hasRunOnce) return;
+  useEffect(() => {
+    if (sessionStorage.getItem(SESSION_KEY)) return;
 
-    // Redirect langsung ke Home jika pertama kali load (saat efek loading berjalan)
-    navigate("/");
 
     const ctx = gsap.context(() => {
       try {
@@ -333,7 +327,7 @@ const PreLoader = () => {
           autoAlpha: 0,
           pointerEvents: "none",
           onComplete: () => {
-            hasRunOnce = true;
+            sessionStorage.setItem(SESSION_KEY, "true");
           },
         });
       } catch (err) {
@@ -344,14 +338,14 @@ const PreLoader = () => {
           pointerEvents: "none",
           display: "none",
         });
-        hasRunOnce = true;
+        sessionStorage.setItem(SESSION_KEY, "true");
       }
     }, containerRef); // Scoped ke containerRef
 
     return () => ctx.revert();
   }, []);
 
-  if (hasRunOnce) return null;
+  if (sessionStorage.getItem(SESSION_KEY)) return null;
 
   return (
     <div ref={containerRef} className="fixed inset-0 z-50 pointer-events-auto">
