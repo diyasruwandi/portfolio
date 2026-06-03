@@ -3,10 +3,10 @@ import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
-import { initAntiInspect } from "./lib/antiInspect";
+// import { initAntiInspect } from "./lib/antiInspect";
 
 // Aktifkan proteksi anti-inspect
-initAntiInspect();
+// initAntiInspect();
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
