@@ -23,7 +23,7 @@ const ProjectCard = ({
           {project.image.map((img, idx) => (
             <div
               key={idx}
-              className="relative h-full aspect-[9/19] rounded-[1rem] border-4 border-neutral-700 overflow-hidden shadow-xl"
+              className="relative h-full aspect-9/19 rounded-2xl border-4 border-neutral-700 overflow-hidden shadow-xl"
             >
               <img
                 src={img}
@@ -42,7 +42,7 @@ const ProjectCard = ({
           className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-in-out opacity-90 group-hover:opacity-100"
         />
       )}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent opacity-80" />
+      <div className="absolute inset-0 bg-linear-to-t from-[#181818] via-transparent to-transparent opacity-80" />
       {/* </div> */}
 
       {/* Content Area */}
