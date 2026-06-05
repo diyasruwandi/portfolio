@@ -22,7 +22,7 @@ export default function Education() {
         {educationData.map((edu, index) => (
           <div key={index} className="flex gap-4 sm:gap-6 relative">
             {/* Left side: Period */}
-            <div className="hidden sm:block w-32 pt-6 text-right flex-shrink-0">
+            <div className="hidden sm:block w-32 pt-6 text-right shrink-0">
               <span className="text-sm  text-neutral-400">{edu.period}</span>
             </div>
 
