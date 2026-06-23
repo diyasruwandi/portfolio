@@ -1,7 +1,7 @@
 import { BriefcaseBusiness } from "lucide-react";
 import { workData } from "../data/work";
-import WorkCard from "./WorkCard";
-import BtnDownload from "./ui/btndownload";
+import WorkCard from "../components/WorkCard";
+import BtnDownload from "../components/ui/btndownload";
 
 const Work = () => {
   return (
@@ -11,7 +11,7 @@ const Work = () => {
           <h2 className="flex items-center gap-2 text-2xl font-semibold text-white">
             <BriefcaseBusiness size={24} /> Career
           </h2>
-          <div className="translate-y-[6px]">
+          <div className="translate-y-1.5">
             <BtnDownload />
           </div>
         </div>

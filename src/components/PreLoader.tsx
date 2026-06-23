@@ -348,10 +348,10 @@ const PreLoader = () => {
 
   return (
     <div ref={containerRef} className="fixed inset-0 z-50 pointer-events-auto">
-      <div className="preloader fixed top-0 left-0 w-full h-[100svh] bg-[#111] [clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] will-change-[clip-path] overflow-hidden z-40">
-        <div className="progress-bar absolute top-0 left-0 w-full h-[7px] bg-white scale-x-0 origin-left will-change-transform"></div>
+      <div className="preloader fixed top-0 left-0 w-full h-svh bg-[#111] [clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] will-change-[clip-path] overflow-hidden z-40">
+        <div className="progress-bar absolute top-0 left-0 w-full h-1.75 bg-white scale-x-0 origin-left will-change-transform"></div>
 
-        <div className="preloader-image absolute top-[35%] lg:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[10rem] h-[10rem] lg:w-[25rem] lg:h-[25rem] [clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] will-change-[clip-path] overflow-hidden">
+        <div className="preloader-image absolute top-[35%] lg:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 lg:w-100 lg:h-100 [clip-path:polygon(0%_0%,100%_0%,100%_100%,0%_100%)] will-change-[clip-path] overflow-hidden">
           <div className="img absolute w-full h-full [clip-path:polygon(0%_100%,100%_100%,100%_100%,0%_100%)] will-change-[clip-path] overflow-hidden">
             <img
               src={d1}

@@ -35,7 +35,7 @@ const CertificateCard = ({ certificate, index }: Props) => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`View ${certificate.title}`}
-          className="ml-3 flex-shrink-0 text-neutral-500 hover:text-white transition-colors duration-200"
+          className="ml-3 shrink-0 text-neutral-500 hover:text-white transition-colors duration-200"
         >
           <ExternalLink size={15} />
         </a>
