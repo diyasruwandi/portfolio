@@ -1,9 +1,12 @@
 import Header from "../components/Header";
 import LogoLoop from "../components/LogoLoop";
 import { techLogos } from "../data/techLogos";
-
+import { useTheme } from "../context/ThemeContext";
 
 export default function Home() {
+  const { theme } = useTheme();
+  const isDark = theme === "dark";
+
   return (
     <>
       <Header />
@@ -19,7 +22,7 @@ export default function Home() {
           gap={80}
           scaleOnHover
           fadeOut
-          fadeOutColor="#111"
+          fadeOutColor={isDark ? "#111" : "#fafafa"}
         />
       </div>
     </>

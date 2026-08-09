@@ -5,11 +5,13 @@ import { motion } from "framer-motion";
 export default function Education() {
   return (
     <section className="space-y-4">
-      <div className="border-b border-neutral-800 pb-4 mb-6">
-        <h2 className="flex items-center gap-2 text-2xl font-semibold text-white">
+      <div className="border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-6">
+        <h2 className="flex items-center gap-2 text-2xl font-semibold text-neutral-900 dark:text-white">
           <GraduationCap size={24} /> Education
         </h2>
-        <p className="text-neutral-400 text-sm mt-2">My education history</p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm mt-2">
+          My education history
+        </p>
       </div>
 
       <motion.div
@@ -23,7 +25,9 @@ export default function Education() {
           <div key={index} className="flex gap-4 sm:gap-6 relative">
             {/* Left side: Period */}
             <div className="hidden sm:block w-32 pt-6 text-right shrink-0">
-              <span className="text-sm  text-neutral-400">{edu.period}</span>
+              <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                {edu.period}
+              </span>
             </div>
 
             {/* Middle: Timeline Line and Icon */}
@@ -32,23 +36,25 @@ export default function Education() {
               <div className="absolute top-0 bottom-0 w-px bg-red-600"></div>
 
               {/* The red node icon */}
-              <div className="relative z-10 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mt-5">
+              <div className="relative z-10 w-8 h-8 bg-red-500 rounded-full flex items-center justify-center mt-5 shadow-xs">
                 <GraduationCap size={14} className="text-white" />
               </div>
             </div>
 
             {/* Right side: Card */}
             <div className="flex-1 pb-8">
-              <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-5 sm:p-6 text-center hover:border-neutral-700 transition duration-300">
-                <span className="block sm:hidden text-xs text-neutral-400 mb-2">
+              <div className="bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 rounded-xl p-5 sm:p-6 text-center hover:border-neutral-400 dark:hover:border-neutral-700 transition duration-300 shadow-xs dark:shadow-none">
+                <span className="block sm:hidden text-xs text-neutral-500 dark:text-neutral-400 mb-2">
                   {edu.period}
                 </span>
-                <h3 className="font-bold text-lg text-white">{edu.degree}</h3>
-                <p className="flex items-center justify-center gap-1.5 text-neutral-400 text-sm mt-2">
+                <h3 className="font-bold text-lg text-neutral-900 dark:text-white">
+                  {edu.degree}
+                </h3>
+                <p className="flex items-center justify-center gap-1.5 text-neutral-600 dark:text-neutral-400 text-sm mt-2">
                   <MapPin size={14} />
                   {edu.location}, {edu.institution}
                 </p>
-                <p className="text-neutral-300 text-sm mt-4 leading-relaxed">
+                <p className="text-neutral-700 dark:text-neutral-300 text-sm mt-4 leading-relaxed">
                   {edu.description}
                 </p>
               </div>

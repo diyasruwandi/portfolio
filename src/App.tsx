@@ -10,7 +10,7 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <div className="min-h-screen w-full bg-[#111] relative text-white">
+    <div className="min-h-screen w-full bg-neutral-50 text-neutral-900 dark:bg-[#111] dark:text-white relative transition-colors duration-300">
       <PreLoader />
       <GridBackground />
       <div className="relative z-10 flex h-full w-full flex-col overflow-x-hidden">

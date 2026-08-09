@@ -6,16 +6,18 @@ import BtnDownload from "../components/ui/btndownload";
 const Work = () => {
   return (
     <section className="space-y-4 mb-10">
-      <div className="border-b border-neutral-800 pb-4 mb-6">
+      <div className="border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-6">
         <div className="flex justify-between items-center">
-          <h2 className="flex items-center gap-2 text-2xl font-semibold text-white">
+          <h2 className="flex items-center gap-2 text-2xl font-semibold text-neutral-900 dark:text-white">
             <BriefcaseBusiness size={24} /> Career
           </h2>
           <div className="translate-y-1.5">
             <BtnDownload />
           </div>
         </div>
-        <p className="text-neutral-400 text-sm mt-2">My Career History</p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm mt-2">
+          My Career History
+        </p>
       </div>
 
       <ol className="flex flex-col mt-4">

@@ -4,12 +4,13 @@ import TextType from "./TextType";
 import { Dock, DockIcon } from "./ui/dock";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { CgMail } from "react-icons/cg";
+
 const Header = () => {
   return (
     <div id="container" className="mb-10 mt-6 p-4 md:p-8 lg:pr-0">
       <section className="space-y-4 bg-cover bg-no-repeat">
         <div className="flex items-center justify-start gap-4">
-          <div className="z-10 rounded-full border-2 border-white shadow-md dark:border-neutral-800 overflow-hidden">
+          <div className="z-10 rounded-full border-2 border-neutral-300 shadow-md dark:border-neutral-800 overflow-hidden">
             <div className="overflow-hidden">
               <img
                 src={profileImg}
@@ -21,10 +22,10 @@ const Header = () => {
           <div className="flex flex-col z-10 font-sans text-xl font-bold lg:text-3xl">
             <TextType
               text={["Frontend Developer", "Hi I'm Diyas Ruwandi"]}
-              className="text-white"
+              className="text-neutral-900 dark:text-white"
               typingSpeed={60}
             />
-            <ul className="mt-2 text-xs ml-5 flex list-disc flex-col gap-1 marker:text-neutral-600 dark:text-neutral-400 lg:flex-row lg:gap-2">
+            <ul className="mt-2 text-xs ml-5 flex list-disc flex-col gap-1 marker:text-neutral-400 dark:marker:text-neutral-600 text-neutral-600 dark:text-neutral-400 lg:flex-row lg:gap-2">
               <li className="lg:mr-8">
                 <span className="relative inline-flex w-fit overflow-hidden">
                   <span className="transform-none will-change-auto">
@@ -42,8 +43,8 @@ const Header = () => {
             </ul>
           </div>
         </div>
-        <div className="space-y-4 mt-1  ">
-          <p className="leading-[1.8] text-neutral-800 dark:text-neutral-300 md:leading-loose text-justify">
+        <div className="space-y-4 mt-1">
+          <p className="leading-[1.8] text-neutral-700 dark:text-neutral-300 md:leading-loose text-justify">
             <span>
               I’m an Informatics Engineering student with a strong interest in
               web development. I am currently focusing on learning and deepening
@@ -57,11 +58,11 @@ const Header = () => {
             direction="middle"
             iconSize={38}
             iconMagnification={54}
-            className="mt-4 border-neutral-700 bg-neutral-900/60"
+            className="mt-4 border-neutral-200 bg-white/80 dark:border-neutral-700 dark:bg-neutral-900/60 shadow-sm"
           >
             <DockIcon
               onClick={() => window.open("https://github.com/diyasruwandi")}
-              className="text-neutral-300 hover:text-white"
+              className="text-neutral-700 hover:text-black dark:text-neutral-300 dark:hover:text-white"
             >
               <FaGithub size={22} />
             </DockIcon>
@@ -71,7 +72,7 @@ const Header = () => {
                   "https://www.linkedin.com/in/diyas-ruwandi-285118295/",
                 )
               }
-              className="text-blue-400 hover:text-blue-300"
+              className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
             >
               <FaLinkedin size={22} />
             </DockIcon>
@@ -81,13 +82,13 @@ const Header = () => {
                   "https://www.instagram.com/yassrwnd?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
                 )
               }
-              className="text-pink-400 hover:text-pink-300"
+              className="text-pink-500 hover:text-pink-600 dark:text-pink-400 dark:hover:text-pink-300"
             >
               <FaInstagram size={22} />
             </DockIcon>
             <DockIcon
               onClick={() => window.open("mailto:diyasruwandi273@gmail.com")}
-              className="text-emerald-400 hover:text-emerald-300"
+              className="text-emerald-500 hover:text-emerald-600 dark:text-emerald-400 dark:hover:text-emerald-300"
             >
               <CgMail size={24} />
             </DockIcon>
@@ -95,7 +96,7 @@ const Header = () => {
         </div>
       </section>
       <div
-        className="my-4 border-t border-gray-300 dark:border-neutral-300"
+        className="my-4 border-t border-neutral-200 dark:border-neutral-800"
         id="breakline"
       ></div>
       <Skills />

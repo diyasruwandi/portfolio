@@ -17,7 +17,9 @@ const WorkCard = ({ working }: Props) => {
     >
       {/* Left Side: periode */}
       <div className="hidden sm:block w-32 pt-6 text-right shrink-0">
-        <span className="text-sm text-neutral-400">{working.period}</span>
+        <span className="text-sm text-neutral-500 dark:text-neutral-400">
+          {working.period}
+        </span>
       </div>
 
       {/* Middle: Timeline */}
@@ -28,7 +30,7 @@ const WorkCard = ({ working }: Props) => {
             <img
               src={working.image}
               alt={working.company}
-              className="rounded-full"
+              className="rounded-full shadow-xs"
             />
           )}
         </div>
@@ -36,15 +38,17 @@ const WorkCard = ({ working }: Props) => {
 
       {/* Right Side: Card */}
       <div className="flex-1 pb-8">
-        <div className="bg-neutral-900 border border-neutral-800 rounded-xl p-5 sm:p-6 text-center hover:border-neutral-700 transition duration-300">
-          <span className="block sm:hidden text-xs text-neutral-400 mb-2">
+        <div className="bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 rounded-xl p-5 sm:p-6 text-center hover:border-neutral-400 dark:hover:border-neutral-700 transition duration-300 shadow-xs dark:shadow-none">
+          <span className="block sm:hidden text-xs text-neutral-500 dark:text-neutral-400 mb-2">
             {working.period}
           </span>
-          <h3 className="font-bold text-lg text-white">{working.position}</h3>
-          <p className="flex items-center justify-center gap-1.5 text-neutral-400 text-sm mt-2">
+          <h3 className="font-bold text-lg text-neutral-900 dark:text-white">
+            {working.position}
+          </h3>
+          <p className="flex items-center justify-center gap-1.5 text-neutral-600 dark:text-neutral-400 text-sm mt-2">
             <MapPin size={14} /> {working.company}
           </p>
-          <p className="text-neutral-300 text-sm mt-4 leading-relaxed">
+          <p className="text-neutral-700 dark:text-neutral-300 text-sm mt-4 leading-relaxed">
             {working.description}
           </p>
         </div>

@@ -14,20 +14,20 @@ const CertificateCard = ({ certificate, index }: Props) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden hover:border-neutral-600 transition-colors duration-300"
+      className="group bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 rounded-xl overflow-hidden hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors duration-300 shadow-xs dark:shadow-none"
     >
       {/* Image */}
-      <div className="overflow-hidden aspect-video bg-neutral-950">
+      <div className="overflow-hidden aspect-video bg-neutral-200/60 dark:bg-neutral-950">
         <img
           src={certificate.image}
           alt={certificate.title}
-          className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out will-change-transform"
         />
       </div>
 
       {/* Footer */}
       <div className="flex items-center justify-between px-4 py-3">
-        <span className="text-sm font-medium text-neutral-200 truncate">
+        <span className="text-sm font-medium text-neutral-800 dark:text-neutral-200 truncate">
           {certificate.title}
         </span>
         <a
@@ -35,7 +35,7 @@ const CertificateCard = ({ certificate, index }: Props) => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label={`View ${certificate.title}`}
-          className="ml-3 shrink-0 text-neutral-500 hover:text-white transition-colors duration-200"
+          className="ml-3 shrink-0 text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white transition-colors duration-200"
         >
           <ExternalLink size={15} />
         </a>

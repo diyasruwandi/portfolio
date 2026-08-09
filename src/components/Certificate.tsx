@@ -1,14 +1,17 @@
 import { ShieldCheck } from "lucide-react";
 import { certificateData } from "../data/certificate";
 import CertificateCard from "./CertificateCard";
+
 const Certificate = () => {
   return (
     <section className="space-y-4 mb-10 mt-15">
-      <div className="border-b border-neutral-800 pb-4 mb-8">
-        <h2 className="flex items-center gap-2 text-2xl font-semibold text-white">
+      <div className="border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-8">
+        <h2 className="flex items-center gap-2 text-2xl font-semibold text-neutral-900 dark:text-white">
           <ShieldCheck size={24} className="text-green-500" /> Certificates
         </h2>
-        <p className="text-neutral-400 text-sm mt-2">What I have learned</p>
+        <p className="text-neutral-600 dark:text-neutral-400 text-sm mt-2">
+          What I have learned
+        </p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-20">
